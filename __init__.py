@@ -21,25 +21,25 @@ custom_icons = None
 PREFABS = {
     "human_eye": {
         "blend_file": "human_eye",
-        "collection": "Human_Eye"
+        "collection": "Human_Eye",
         "description": "Realistic human eye with detailed iris and sclera",
         "icon": "human_eye_thumb_small"
     },
     "human_eye_stylized": {
         "blend_file": "human_eye_stylized",
-        "collection": "Human_Eye_Stylized"
+        "collection": "Human_Eye_Stylized",
         "description": "Realistic human eye with detailed iris and sclera",
         "icon": "stylized_eye_thumb_small"
     },
     "aquatic_vertabrate_eye": {
         "blend_file": "aquatic_vertabrate_eye",
-        "collection": "Aquatic_Vertabrate_Eye"
+        "collection": "Aquatic_Vertabrate_Eye",
         "description": "Eye designed for aquatic creatures like fish and dolphins",
         "icon": "aquatic_vertabrate_eye_thumb_small"
     },
     "reptile_eye": {
         "blend_file": "reptile_eye",
-        "collection": "Reptile_Eye"
+        "collection": "Reptile_Eye",
         "description": "Reptilian eye with slit pupils and scaled texture",
         "icon": "reptile_eye_thumb_small"
     },
@@ -108,7 +108,8 @@ class MESH_MT_add_prefab(Menu):
     
     def draw(self, context):
         layout = self.layout
-        
+        icons = load_custom_icons()
+
         # Dynamically create menu items from PREFABS dictionary
         #for prefab_id, prefab_info in PREFABS.items():
             # Format the display name (e.g., "human_eye" becomes "Human Eye")
